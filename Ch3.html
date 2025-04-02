@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<!-- Momoko Abe-->
+<html lang="en">
+    <head>
+        <title> Chapter3 Project </title>
+        <meta charset= "utf-8">
+    </head>
+    <body>
+    <h1> Chapter3 Project</h1>
+    <p>1. Name a situation where you would need to create an "if" statement.  (There are many answers to this question. )</p>
+    <p>When I need to check the situation is true or false. In this homework, we check to see if this webpage can use their name or not.</p>
+    <n>
+    <p>2. When comparing values, in what data type is the result stored?</p>
+    <p>The data type Boolean stores the data "true" or "false"</p>
+
+        <script>
+        //1
+        let username = prompt("What is your name?");
+    
+        let proceed = confirm(`Are you allow to use your name ${username} in this webpage?`);
+    
+        if (proceed) {
+            console.log("Yes, I can use your name on this page");
+        } else {
+            console.log("No, you can not use my name on this web page. Privacy Please");
+            username = `N/A` ;
+        }
+
+        let age = prompt("How old are you?");
+
+        alert(`Hi ${username} ! You are ${age} years old.`);
+        
+        </script>
+
+    </body>
+</html>
