@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--4/8 Momoko Abe-->
+<html lang="en">
+    <head>
+        <title> Chapter3 Project </title>
+        <meta charset= "utf-8">
+    </head>
+    <body>
+    <h1> Chapter4 Project</h1>
+    <p>1. When would you use a switch statement in your projects?</p>
+    <p>I use a switch statement when... </p>
+    <p> I want a user to ansewr a multiple choice question, such as choose from a menu.</p>
+    
+        <script>
+        //1
+        const favDay = prompt("What is your favorite day of the week? (e.g., Monday, Tuesday)");
+        //2
+        switch (favDay.toLowerCase()){
+            //3
+            case "monday":
+            //4
+                console.log("Your favorite day is Monday");
+            //5
+                break;
+            case "tuesday":
+                console.log("Your favorite day is Tuesday");
+                break;
+            case "wednesday":
+                console.log("Your favorite day is Wednesday");
+                break;
+            case "thursday":
+                console.log("Your favorite day is Thursday");
+                break;
+            case "friday":
+                console.log("Your favorite day is Friday");
+                break;
+            case "saturday":
+                console.log("Your favorite day is Saturday");
+                break;
+            case "sunday":
+                console.log("Your favorite day is Sunday");
+                break;
+                //6
+                default:
+                console.log("Your input doesn't match a specific day.");
+        }
+
+        </script>
+
+    </body>
+</html>
