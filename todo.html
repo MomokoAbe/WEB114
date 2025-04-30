@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- Momoko Abe
+      2025/4/29-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List and JavaScript Concepts</title>
+    <style>
+        body {
+            font-family: Sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: black;
+        }
+        .question-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .question-box h3 {
+            margin-top: 0;
+            color: black;
+        }
+        .todo-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #taskList {
+            list-style-type: none;
+            padding: 0;
+        }
+        #taskList li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        #taskList li:last-child {
+            border-bottom: none;
+        }
+        #taskList li button {
+            background-color:#ccc;
+            color: black;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        #taskList li button:hover {
+            background-color: #c82333;
+        }
+        #taskInput {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            flex-grow: 1;
+        }
+        #addTaskBtn {
+            padding: 8px 15px;
+            background-color: #ccc;
+            color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #addTaskBtn:hover {
+            background-color: grey;
+        }
+        .input-area {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+        }
+    </style>
+   
+<body>
+    <h1>Project 7- Working with a webpage</h1>
+
+    <div class="question-box">
+        <h3>Why is the JavaScript textContent property safer than innerHTML?</h3>
+        <p>The textContent property is safer than innerHTML. if you use innerHTML, it can input anything. 
+            However,textContent treated strictly as text, it makes safer for input.</p>
+    </div>
+
+    <div class="question-box">
+        <h3>Explain the relationship between an HTML attribute and a corresponding DOM property (explain the connection to JavaScript). Use a specific example in your answer.</h3>
+        <p>In HTML, tags can have attributes. When the browser parses the HTML and creates DOM objects for the tags, it recognizes the standard attributes and generates DOM properties for them.</p>
+        <pre><code>&lt;body id="test" something="non-standard"&gt;
+            &lt;script&gt;
+                  alert(document.body.id); // test
+                  // the properties will not be generated.
+                  alert(document.body.something); // undefined
+            &lt;/script&gt;
+        &lt;/body&gt;</code></pre>
+        <p>Standard attributes are described in the specification of the corresponding element class.</p>
+    </div>
+
+    <div class="todo-container">
+        <h2>To-Do List</h2>
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        <ul id="taskList">
+            </ul>
+    </div>
+
+    <script src="todo.js"></script>
+
+</body>
+</html>
