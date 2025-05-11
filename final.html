@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Momoko Abe
+      2025/5/13-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune</title>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fortune Teller</h1>
+        <div class="input-area">
+            <label for="name">Given Name:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="input-area">
+            <label for="birthday">BirthDay（YYYY-MM-DD）:</label>
+            <input type="date" id="birthday">
+        </div>
+        <button id="uranaiButton">Today's fortune</button>
+        <div id="result" class="result-area">
+            <h2>Today's fortune</h2>
+            <p id="seiza"></p>
+            <p id="unsei"></p>
+            <p id="luckyColor"></p>
+            <p id="luckyItem"></p>
+        </div>
+    </div>
+    <script src="final.js"></script>
+</body>
+</html>
